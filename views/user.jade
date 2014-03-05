@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    table#dg
+    script.
+        $('#dg').edatagrid(
+            {
+                url: '/user/search',
+                saveUrl: '/user/save',
+                updateUrl: '/user/update',
+                destroyUrl: '/user/delete',
+                method: 'GET',
+                rownumbers: true,
+                pagination: true,
+                fitColumns: true,
+                //sortOrder: 'desc',
+                //remoteSort: false,
+                columns:[[
+                    {field: '_id', title: '内部编号', width: 150, sortable: true},
+                    {field: 'id', title: '编号', sortable: true},
+                    {field: 'name', title: '名称', width: 200, sortable: true, editor: 'text'},
+                    {field: 'password', title: '口令', width:100, sortable: true, editor: 'text'},
+                    {field: 'sex', title: '性别', width:20, sortable: true, align: 'center', formatter: function(value, row, index){return value == true?'男':'女'}},
+                    {field: 'age', title: '年龄', width:50, sortable: true},
+                    {field: 'birth', title: '出生日期', sortable: true},
+                    {field: 'others', title: '其它'}
+                ]]
+            }
+        );
+    //ol
+    //    each user in users
+    //        li= user.name
