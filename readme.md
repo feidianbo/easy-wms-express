@@ -1,1 +1,1 @@
-a ware house system with ( easy-ui + nodejs + express + mongo[ose]db )
+A WARE HOUSE SYSTEM WITH ( EASY-UI + NODEJS + EXPRESS + MONGO[OSE]DB )
